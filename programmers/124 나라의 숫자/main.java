@@ -15,8 +15,5 @@ public class main {
 		System.out.println("100000 " +solution.solution(100000));
 		System.out.println("200000 " +solution.solution(200000));
 		
-		
-		
-		
 	}
 }
