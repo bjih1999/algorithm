@@ -1,0 +1,5 @@
+print(solution('JAN'))
+print(solution('JEROEN'))
+print(solution('JAZ'))
+print(solution('BBBAAAAAAAAAAB'))
+print(solution('ABAAAAAAAAABB'))
