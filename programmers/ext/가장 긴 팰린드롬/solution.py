@@ -28,10 +28,8 @@ def solution(s):
 	length = [1]
 	for index in range(len(s)):
 		if (index-1 >= 0) and (index+1 < len(s)) and (s[index-1] == s[index+1]):
-			# print(letter)
 			count = 1
 			i = 1
-			# print('@', index)
 			while (index-i >= 0) and (index+i < len(s)) and (s[index-i] == s[index+i]):
 				count += 2
 				i += 1
