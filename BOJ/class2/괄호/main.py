@@ -54,7 +54,6 @@ for i in range(N):
 
 stack = []
 answers = []
-# print(PS_list)
 for PS in PS_list:
 	for letter in PS:
 		if letter == '(':
