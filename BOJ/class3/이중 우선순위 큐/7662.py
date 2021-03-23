@@ -5,28 +5,25 @@ T = int(sys.stdin.readline().rstrip())
 result = []
 for _ in range(T):
 	k = int(sys.stdin.readline().rstrip())
-	maxq = []
-	minq = []
+	q = []
 	for _ in range(k):
 		op, value = sys.stdin.readline().rstrip().split()
 		value = int(value)
 		if op == 'I':
-			heapq.heappush(maxq, -value)
-			heapq.heappush(minq, value)
+			# print(q)
+			# print(value)
+			heapq.heappush(q, value)
 		elif op == 'D' and value == -1:
-			if len(minq) > 0:
-				num = heapq.heappop(minq)
-				maxq.remove(-num)
-				heapq.heapify(maxq)
+			if len(q) > 0:
+				heapq.heappop(q)
 		elif op == 'D' and value == 1:
-			if len(maxq) > 0:
-				num = heapq.heappop(maxq)
-				minq.remove(-num)
-				heapq.heapify(minq)
-		# print(maxq)
-		# print(minq)
-	if len(maxq) != 0 and len(minq) != 0:
-		result.append(str(-1*heapq.heappop(maxq))+' '+str(heapq.heappop(minq)))
+			if len(q) > 0:
+				q = heapq.nlargest(len(q), q)[1:]
+				heapq.heapify(q)
+		# print(q)
+	# print(q)
+	if len(q) != 0:
+		result.append(str(heapq.nlargest(1, q)[0])+' '+str(heapq.heappop(q)))
 	else:
 		result.append('EMPTY')
 
