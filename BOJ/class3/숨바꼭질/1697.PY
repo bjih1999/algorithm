@@ -1,25 +1,38 @@
 import sys
-
-def dfs(x, K):
-	right = abs(K - (x+1))
-	left = abs(K - (x-1))
-	multiply2 = abs(K - 2*x)
-	shortest = min(right, left, multiply2)
-	print(x)
-	if shortest == right:
-		x = x+1
-	elif shortest == left:
-		x = x-1
-	elif shortest == multiply2:
-		x = 2*x
-	cnt += 1
-
+from queue import Queue
 
 N, K = map(int, sys.stdin.readline().rstrip().split())
 
-x = N
-cnt = 0
+now = N
+field = [False for i in range(100001)]
+q = Queue()
+field[now] = 0
+if now + 1 <= 100000:
+	q.put(now + 1)
+if now - 1 >= 0:
+	q.put(now - 1)
+if now*2 <= 100000:
+	q.put(now * 2)
+ 
+while not q.empty():
+	pos = q.get()
 
-while x != K:
+	if pos == now - 1:
+		if field[pos] == False:
+			field[pos] = field[pos] - 1
+	elif pos == now + 1:
+		if field[pos] == False:
+			field[pos] = field[pos] + 1
+	else:
+		if field[pos] == False:
+			field[pos] = field[pos] * 2
 	
-print(cnt)
+	now = pos
+	if now + 1 <= 100000:
+		q.put(now + 1)
+	if now - 1 >= 0:
+		q.put(now - 1)
+	if now*2 <= 100000:
+		q.put(now * 2)
+
+print(field[N])
