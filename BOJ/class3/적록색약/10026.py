@@ -1,110 +1,89 @@
 '''
-Àû·Ï»ö¾à
-½Ã°£ Á¦ÇÑ	¸Þ¸ð¸® Á¦ÇÑ	Á¦Ãâ	Á¤´ä	¸ÂÀº »ç¶÷	Á¤´ä ºñÀ²
-1 ÃÊ	128 MB	19158	11130	8783	58.139%
-¹®Á¦
-Àû·Ï»ö¾àÀº »¡°£»ö°ú ÃÊ·Ï»öÀÇ Â÷ÀÌ¸¦ °ÅÀÇ ´À³¢Áö ¸øÇÑ´Ù. µû¶ó¼­, Àû·Ï»ö¾àÀÎ »ç¶÷ÀÌ º¸´Â ±×¸²Àº ¾Æ´Ñ »ç¶÷ÀÌ º¸´Â ±×¸²°ú´Â Á» ´Ù¸¦ ¼ö ÀÖ´Ù.
+ì ë¡ìƒ‰ì•½
 
-Å©±â°¡ N¡¿NÀÎ ±×¸®µåÀÇ °¢ Ä­¿¡ R(»¡°­), G(ÃÊ·Ï), B(ÆÄ¶û) Áß ÇÏ³ª¸¦ »öÄ¥ÇÑ ±×¸²ÀÌ ÀÖ´Ù. ±×¸²Àº ¸î °³ÀÇ ±¸¿ªÀ¸·Î ³ª´µ¾îÁ® ÀÖ´Âµ¥, ±¸¿ªÀº °°Àº »öÀ¸·Î ÀÌ·ç¾îÁ® ÀÖ´Ù. ¶Ç, °°Àº »ö»óÀÌ »óÇÏÁÂ¿ì·Î ÀÎÁ¢ÇØ ÀÖ´Â °æ¿ì¿¡ µÎ ±ÛÀÚ´Â °°Àº ±¸¿ª¿¡ ¼ÓÇÑ´Ù. (»ö»óÀÇ Â÷ÀÌ¸¦ °ÅÀÇ ´À³¢Áö ¸øÇÏ´Â °æ¿ìµµ °°Àº »ö»óÀÌ¶ó ÇÑ´Ù)
+ì‹œê°„ ì œí•œ	ë©”ëª¨ë¦¬ ì œí•œ	ì œì¶œ	ì •ë‹µ	ë§žì€ ì‚¬ëžŒ	ì •ë‹µ ë¹„ìœ¨
+1 ì´ˆ	128 MB	19158	11130	8783	58.139%
+ë¬¸ì œ
+ì ë¡ìƒ‰ì•½ì€ ë¹¨ê°„ìƒ‰ê³¼ ì´ˆë¡ìƒ‰ì˜ ì°¨ì´ë¥¼ ê±°ì˜ ëŠë¼ì§€ ëª»í•œë‹¤. ë”°ë¼ì„œ, ì ë¡ìƒ‰ì•½ì¸ ì‚¬ëžŒì´ ë³´ëŠ” ê·¸ë¦¼ì€ ì•„ë‹Œ ì‚¬ëžŒì´ ë³´ëŠ” ê·¸ë¦¼ê³¼ëŠ” ì¢€ ë‹¤ë¥¼ ìˆ˜ ìžˆë‹¤.
 
-¿¹¸¦ µé¾î, ±×¸²ÀÌ ¾Æ·¡¿Í °°Àº °æ¿ì¿¡
+í¬ê¸°ê°€ NÃ—Nì¸ ê·¸ë¦¬ë“œì˜ ê° ì¹¸ì— R(ë¹¨ê°•), G(ì´ˆë¡), B(íŒŒëž‘) ì¤‘ í•˜ë‚˜ë¥¼ ìƒ‰ì¹ í•œ ê·¸ë¦¼ì´ ìžˆë‹¤. ê·¸ë¦¼ì€ ëª‡ ê°œì˜ êµ¬ì—­ìœ¼ë¡œ ë‚˜ë‰˜ì–´ì ¸ ìžˆëŠ”ë°, êµ¬ì—­ì€ ê°™ì€ ìƒ‰ìœ¼ë¡œ ì´ë£¨ì–´ì ¸ ìžˆë‹¤. ë˜, ê°™ì€ ìƒ‰ìƒì´ ìƒí•˜ì¢Œìš°ë¡œ ì¸ì ‘í•´ ìžˆëŠ” ê²½ìš°ì— ë‘ ê¸€ìžëŠ” ê°™ì€ êµ¬ì—­ì— ì†í•œë‹¤. (ìƒ‰ìƒì˜ ì°¨ì´ë¥¼ ê±°ì˜ ëŠë¼ì§€ ëª»í•˜ëŠ” ê²½ìš°ë„ ê°™ì€ ìƒ‰ìƒì´ë¼ í•œë‹¤)
+
+ì˜ˆë¥¼ ë“¤ì–´, ê·¸ë¦¼ì´ ì•„ëž˜ì™€ ê°™ì€ ê²½ìš°ì—
 
 RRRBB
 GGBBB
 BBBRR
 BBRRR
 RRRRR
-Àû·Ï»ö¾àÀÌ ¾Æ´Ñ »ç¶÷ÀÌ ºÃÀ» ¶§ ±¸¿ªÀÇ ¼ö´Â ÃÑ 4°³ÀÌ´Ù. (»¡°­ 2, ÆÄ¶û 1, ÃÊ·Ï 1) ÇÏÁö¸¸, Àû·Ï»ö¾àÀÎ »ç¶÷Àº ±¸¿ªÀ» 3°³ º¼ ¼ö ÀÖ´Ù. (»¡°­-ÃÊ·Ï 2, ÆÄ¶û 1)
+ì ë¡ìƒ‰ì•½ì´ ì•„ë‹Œ ì‚¬ëžŒì´ ë´¤ì„ ë•Œ êµ¬ì—­ì˜ ìˆ˜ëŠ” ì´ 4ê°œì´ë‹¤. (ë¹¨ê°• 2, íŒŒëž‘ 1, ì´ˆë¡ 1) í•˜ì§€ë§Œ, ì ë¡ìƒ‰ì•½ì¸ ì‚¬ëžŒì€ êµ¬ì—­ì„ 3ê°œ ë³¼ ìˆ˜ ìžˆë‹¤. (ë¹¨ê°•-ì´ˆë¡ 2, íŒŒëž‘ 1)
 
-±×¸²ÀÌ ÀÔ·ÂÀ¸·Î ÁÖ¾îÁ³À» ¶§, Àû·Ï»ö¾àÀÎ »ç¶÷ÀÌ ºÃÀ» ¶§¿Í ¾Æ´Ñ »ç¶÷ÀÌ ºÃÀ» ¶§ ±¸¿ªÀÇ ¼ö¸¦ ±¸ÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ½Ã¿À.
+ê·¸ë¦¼ì´ ìž…ë ¥ìœ¼ë¡œ ì£¼ì–´ì¡Œì„ ë•Œ, ì ë¡ìƒ‰ì•½ì¸ ì‚¬ëžŒì´ ë´¤ì„ ë•Œì™€ ì•„ë‹Œ ì‚¬ëžŒì´ ë´¤ì„ ë•Œ êµ¬ì—­ì˜ ìˆ˜ë¥¼ êµ¬í•˜ëŠ” í”„ë¡œê·¸ëž¨ì„ ìž‘ì„±í•˜ì‹œì˜¤.
 
-ÀÔ·Â
-Ã¹Â° ÁÙ¿¡ NÀÌ ÁÖ¾îÁø´Ù. (1 ¡Â N ¡Â 100)
+ìž…ë ¥
+ì²«ì§¸ ì¤„ì— Nì´ ì£¼ì–´ì§„ë‹¤. (1 â‰¤ N â‰¤ 100)
 
-µÑÂ° ÁÙºÎÅÍ N°³ ÁÙ¿¡´Â ±×¸²ÀÌ ÁÖ¾îÁø´Ù.
+ë‘˜ì§¸ ì¤„ë¶€í„° Nê°œ ì¤„ì—ëŠ” ê·¸ë¦¼ì´ ì£¼ì–´ì§„ë‹¤.
 
-Ãâ·Â
-Àû·Ï»ö¾àÀÌ ¾Æ´Ñ »ç¶÷ÀÌ ºÃÀ» ¶§ÀÇ ±¸¿ªÀÇ °³¼ö¿Í Àû·Ï»ö¾àÀÎ »ç¶÷ÀÌ ºÃÀ» ¶§ÀÇ ±¸¿ªÀÇ ¼ö¸¦ °ø¹éÀ¸·Î ±¸ºÐÇØ Ãâ·ÂÇÑ´Ù.
+ì¶œë ¥
+ì ë¡ìƒ‰ì•½ì´ ì•„ë‹Œ ì‚¬ëžŒì´ ë´¤ì„ ë•Œì˜ êµ¬ì—­ì˜ ê°œìˆ˜ì™€ ì ë¡ìƒ‰ì•½ì¸ ì‚¬ëžŒì´ ë´¤ì„ ë•Œì˜ êµ¬ì—­ì˜ ìˆ˜ë¥¼ ê³µë°±ìœ¼ë¡œ êµ¬ë¶„í•´ ì¶œë ¥í•œë‹¤.
 
-¿¹Á¦ ÀÔ·Â 1 
+ì˜ˆì œ ìž…ë ¥ 1 
 5
 RRRBB
 GGBBB
 BBBRR
 BBRRR
 RRRRR
-¿¹Á¦ Ãâ·Â 1 
+
+ì˜ˆì œ ì¶œë ¥ 1 
 4 3
 '''
 import sys
 from collections import deque
 
+def bfs(picture, visited):
+    area_cnt = 0
+    i = 0
+    while i < N:
+        j = 0
+        while j < N:
+            if visited[i][j] == False:
+                cur_color = picture[i][j]
+
+                visited[i][j] = True
+                que.append((i, j, area_cnt))
+                while que:
+                    y, x, _ = que.popleft()
+                    if 0 <= y-1 < N and visited[y-1][x] == False and picture[y-1][x] == cur_color:
+                        que.append((y-1, x, area_cnt))
+                        visited[y-1][x] = True
+                    if 0 <= y+1 < N and visited[y+1][x] == False and picture[y+1][x] == cur_color:
+                        que.append((y+1, x, area_cnt))
+                        visited[y+1][x] = True
+                    if 0 <= x-1 < N and visited[y][x-1] == False and picture[y][x-1] == cur_color:
+                        que.append((y, x-1, area_cnt))
+                        visited[y][x-1] = True
+                    if 0 <= x+1 < N and visited[y][x+1] == False and picture[y][x+1] == cur_color:
+                        que.append((y, x+1, area_cnt))
+                        visited[y][x+1] = True
+                area_cnt += 1
+            j += 1
+        i += 1
+    return area_cnt
+
 N = int(sys.stdin.readline().rstrip())
 picture = []
 que = deque()
 visited = [[False for _ in range(N)] for _ in range(N)]
+
 for _ in range(N):
     picture.append(list(sys.stdin.readline().rstrip()))
 
-area_cnt = 0
-i = 0
-while i < N:
-    j = 0
-    while j < N:
-        if visited[i][j] == False:
-            cur_color = picture[i][j]
-
-            visited[i][j] = True
-            que.append((i, j, area_cnt))
-            while que:
-                y, x, _ = que.popleft()
-                if 0 <= y-1 < N and visited[y-1][x] == False and picture[y-1][x] == cur_color:
-                    que.append((y-1, x, area_cnt))
-                    visited[y-1][x] = True
-                if 0 <= y+1 < N and visited[y+1][x] == False and picture[y+1][x] == cur_color:
-                    que.append((y+1, x, area_cnt))
-                    visited[y+1][x] = True
-                if 0 <= x-1 < N and visited[y][x-1] == False and picture[y][x-1] == cur_color:
-                    que.append((y, x-1, area_cnt))
-                    visited[y][x-1] = True
-                if 0 <= x+1 < N and visited[y][x+1] == False and picture[y][x+1] == cur_color:
-                    que.append((y, x+1, area_cnt))
-                    visited[y][x+1] = True
-            area_cnt += 1
-        j += 1
-    i += 1
-print(area_cnt)
+print(bfs(picture, visited))
 que = deque()
 visited = [[False for _ in range(N)] for _ in range(N)]
 for i in range(N):
     for j in range(N):
         if picture[i][j] == 'G':
             picture[i][j] = 'R'
-area_cnt = 0
-i = 0
-while i < N:
-    j = 0
-    while j < N:
-        if visited[i][j] == False:
-            cur_color = picture[i][j]
-
-            visited[i][j] = True
-            que.append((i, j, area_cnt))
-            while que:
-                y, x, _ = que.popleft()
-                if 0 <= y-1 < N and visited[y-1][x] == False and picture[y-1][x] == cur_color:
-                    que.append((y-1, x, area_cnt))
-                    visited[y-1][x] = True
-                if 0 <= y+1 < N and visited[y+1][x] == False and picture[y+1][x] == cur_color:
-                    que.append((y+1, x, area_cnt))
-                    visited[y+1][x] = True
-                if 0 <= x-1 < N and visited[y][x-1] == False and picture[y][x-1] == cur_color:
-                    que.append((y, x-1, area_cnt))
-                    visited[y][x-1] = True
-                if 0 <= x+1 < N and visited[y][x+1] == False and picture[y][x+1] == cur_color:
-                    que.append((y, x+1, area_cnt))
-                    visited[y][x+1] = True
-            area_cnt += 1
-        j += 1
-    i += 1
-print(area_cnt)
+print(bfs(picture, visited))
