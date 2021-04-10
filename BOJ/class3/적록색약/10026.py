@@ -41,6 +41,8 @@ RRRRR
 import sys
 from collections import deque
 
+shift_pattern = [(1, 0), (-1, 0), (0, -1), (0, 1)]
+
 def bfs(picture, visited):
     area_cnt = 0
     i = 0
@@ -54,34 +56,30 @@ def bfs(picture, visited):
                 que.append((i, j, area_cnt))
                 while que:
                     y, x, _ = que.popleft()
-                    if 0 <= y-1 < N and visited[y-1][x] == False and picture[y-1][x] == cur_color:
-                        que.append((y-1, x, area_cnt))
-                        visited[y-1][x] = True
-                    if 0 <= y+1 < N and visited[y+1][x] == False and picture[y+1][x] == cur_color:
-                        que.append((y+1, x, area_cnt))
-                        visited[y+1][x] = True
-                    if 0 <= x-1 < N and visited[y][x-1] == False and picture[y][x-1] == cur_color:
-                        que.append((y, x-1, area_cnt))
-                        visited[y][x-1] = True
-                    if 0 <= x+1 < N and visited[y][x+1] == False and picture[y][x+1] == cur_color:
-                        que.append((y, x+1, area_cnt))
-                        visited[y][x+1] = True
+                    for shift in shift_pattern:
+                        dy = y + shift[0]
+                        dx = x + shift[1]
+                        if 0 <= dy < N  and 0 <= dx < N and visited[dy][dx] == False and picture[dy][dx] == cur_color:
+                            que.append((dy, dx, area_cnt))
+                            visited[dy][dx] = True
                 area_cnt += 1
             j += 1
         i += 1
     return area_cnt
 
 N = int(sys.stdin.readline().rstrip())
-picture = []
 que = deque()
 visited = [[False for _ in range(N)] for _ in range(N)]
 
+picture = []
 for _ in range(N):
     picture.append(list(sys.stdin.readline().rstrip()))
 
 print(bfs(picture, visited))
+
 que = deque()
 visited = [[False for _ in range(N)] for _ in range(N)]
+
 for i in range(N):
     for j in range(N):
         if picture[i][j] == 'G':
