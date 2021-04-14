@@ -55,7 +55,6 @@ for _ in range(M):
 while len(queue) != 0:
 	cur_com = heapq.heappop(queue)
 	result += 1
-	# print('!!', cur_com)
 	for connected_com in network[cur_com]:
 		if connected_com not in infected:
 			heapq.heappush(queue, connected_com)
