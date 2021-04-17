@@ -1,38 +1,28 @@
 import sys
 from queue import Queue
 
+def use_teleport(pos, dest):
+	if pos == 0:
+		return -1
+	
+	teleport_cnt = 0
+	while pos < dest:
+		pos *= 2
+		# print(pos)
+		teleport_cnt += 1
+		if pos == dest:
+			return teleport_cnt
+	return -1
+
 N, K = map(int, sys.stdin.readline().rstrip().split())
 
-now = N
-field = [False for i in range(100001)]
-q = Queue()
-field[now] = 0
-if now + 1 <= 100000:
-	q.put(now + 1)
-if now - 1 >= 0:
-	q.put(now - 1)
-if now*2 <= 100000:
-	q.put(now * 2)
- 
-while not q.empty():
-	pos = q.get()
+if K < N:
+	print(N-K)
 
-	if pos == now - 1:
-		if field[pos] == False:
-			field[pos] = field[pos] - 1
-	elif pos == now + 1:
-		if field[pos] == False:
-			field[pos] = field[pos] + 1
-	else:
-		if field[pos] == False:
-			field[pos] = field[pos] * 2
+time_to_reach = [-1 for _ in range(K+1)]
+
+for pos in range(N, K+1):
+	if time_to_reach[pos]
+
+print(time_to_reach[K])
 	
-	now = pos
-	if now + 1 <= 100000:
-		q.put(now + 1)
-	if now - 1 >= 0:
-		q.put(now - 1)
-	if now*2 <= 100000:
-		q.put(now * 2)
-
-print(field[N])
