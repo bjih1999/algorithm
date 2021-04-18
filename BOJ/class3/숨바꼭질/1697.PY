@@ -18,4 +18,3 @@ if K < N:
 else:
 	dfs(N, K, 0, visited)
 	print(min_cnt)
-	
