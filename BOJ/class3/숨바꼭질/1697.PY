@@ -1,20 +1,26 @@
 import sys
-from queue import Queue
-min_cnt = 0
-def dfs(pos, K, cnt, visited):
-	global min_cnt
-	while 0 < pos < K:
-		dfs(pos*2, K, cnt+1)
-		dfs(pos+1, K, cnt+1)
-		dfs(pos-1, K, cnt+1)
-	if pos == K and cnt < min_cnt:
-		min_cnt = cnt
+from collections import deque
+
+def bfs(K, queue, visited):
+	while len(queue):
+		pos = queue.popleft()
+		if pos + 1 <= K and visited[pos + 1] == -1:
+			visited[pos+1] = visited[pos] + 1
+			queue.append(pos + 1)
+		if pos - 1 >= 0 and visited[pos - 1] == -1:
+			visited[pos-1] = visited[pos] + 1
+			queue.append(pos - 1)
+		if pos * 2 <= K and visited[pos * 2] == -1:
+			visited[pos*2] = visited[pos] + 1
+			queue.append(pos * 2)
 
 N, K = map(int, sys.stdin.readline().rstrip().split())
-visited = [False for _ in range(K)]
-
+visited = [-1 for _ in range(K+1)]
+queue = deque([N])
+visited[N] = 0
 if K < N:
 	print(N-K)
 else:
-	dfs(N, K, 0, visited)
-	print(min_cnt)
+	bfs(K, queue, visited)
+	# print(visited)
+	print(visited[K])
