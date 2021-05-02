@@ -10,8 +10,6 @@ for _ in range(T):
 		op, value = sys.stdin.readline().rstrip().split()
 		value = int(value)
 		if op == 'I':
-			# print(q)
-			# print(value)
 			heapq.heappush(q, value)
 		elif op == 'D' and value == -1:
 			if len(q) > 0:
