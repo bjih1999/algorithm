@@ -14,22 +14,18 @@ for _ in range(M):
 	if instruction[0] == 'add':
 		S.add(value)
 	elif instruction[0] == 'remove':
-		if value in S:
-			S.remove(value)
+		S.discard(value)
 	elif instruction[0] == 'check':
 		if value in S:
-			answers+='1\n'
+			print(1)
 		else:
-			answers+='0\n'
+			print(0)
 	elif instruction[0] == 'toggle':
 		if value in S:
 			S.remove(value)
 		else:
 			S.add(value)
 	elif instruction[0] == 'all':
-		for i in range(21):
-			S.add(i)
+		S = set(list(range(21)))
 	elif instruction[0] == 'empty':
-		S.clear()
-
-print(answers.rstrip())
+		S = set()
