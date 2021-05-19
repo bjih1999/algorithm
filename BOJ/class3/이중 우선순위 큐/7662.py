@@ -11,7 +11,7 @@ for _ in range(T):
 	k = int(sys.stdin.readline().rstrip())
 	minq = []
 	maxq = []
-	visited = [False] * 1000
+	visited = [False] * 1000000
 	for id in range(k):
 		op, value = sys.stdin.readline().rstrip().split()
 		value = int(value)
