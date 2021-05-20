@@ -8,7 +8,6 @@ X = list(map(int, sys.stdin.readline().rstrip().split()))
 answer = deque()
 
 sortedX = enumerate(sorted(list(set(X))))
-# print(sorted(list(set(X))))
 coordinate = {}
 
 for pos, x in sortedX:
@@ -17,8 +16,6 @@ for pos, x in sortedX:
 answers = []
 for x in X:
 	answers.append(coordinate[x])
-
-# print(coordinate)
 print(' '.join(map(str, answers)))
 
 
