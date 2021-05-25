@@ -24,6 +24,5 @@ while len(notVisited) > 0:
         for i in adjList[node]:
             if i in notVisited and i not in queue:
                 queue.append(i)
-        print(queue)
     count += 1
 print(count)
