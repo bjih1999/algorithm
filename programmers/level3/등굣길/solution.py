@@ -17,6 +17,6 @@ def solution(m, n, puddles):
                 if 0 < j < m:
                     map[i][j] += map[i][j-1]
     print(map)
-    return map[n-1][m-1]
+    return map[n-1][m-1] % 1000000007
 
 # print(solution(7, 4, [[2, 1], [2, 2], [2, 3], [4, 2], [4, 3], [4, 4], [6, 2], [6, 3]]))
