@@ -1,19 +1,18 @@
-# def is_decrese(bridge, k):
-#     for i in range(1, k):
-#         if bridge[i-1] - bridge[i] < 0:
-#             return False
-#     return True 
-
-import numpy as np
-
 def solution(stones, k):
-    stones = np.array(stones)
-    count = 200000001
-    for i in range(len(stones)-k):
-        if np.sum(stones[i:i+k] - stones[i]) < 1:
-            if count > stones[i]:
-                count = stones[i]
-    
-    return int(count)
-
+    left = 1
+    right = max(stones)
+    mid = (left + right) // 2
+    while left < right-1:
+        count = len([stone for stone in stones if stone <= mid])
+        print(count)
+        
+        if count <= k:
+            left = mid
+            mid = (left + right) // 2
+            
+        else:
+            right = mid
+            mid = (left + right) // 2
+            
+    return mid
 print(solution([2, 4, 5, 3, 2, 1, 4, 2, 5, 1], 3))
