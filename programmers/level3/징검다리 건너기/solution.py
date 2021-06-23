@@ -2,11 +2,23 @@ def solution(stones, k):
     left = 1
     right = max(stones)
     mid = (left + right) // 2
+    if len(stones) == k:
+        return right
     while left < right-1:
-        count = len([stone for stone in stones if stone <= mid])
-        print(count)
+        count = 0
+        possible = True
+        for stone in stones:
+            
+            if stone < mid:
+                count += 1
+            else:
+                count = 0
+            
+            if count == k:
+                possible = False
+                break
         
-        if count <= k:
+        if possible == True:
             left = mid
             mid = (left + right) // 2
             
