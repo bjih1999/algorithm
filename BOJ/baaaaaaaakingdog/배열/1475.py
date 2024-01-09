@@ -1,8 +1,7 @@
 import sys
 import math
-# number = sys.stdin.readline().rstrip()
+number = sys.stdin.readline().rstrip()
 
-number = '9999'
 count = { n:0 for n in range(0, 9)}
 
 for n in number:
