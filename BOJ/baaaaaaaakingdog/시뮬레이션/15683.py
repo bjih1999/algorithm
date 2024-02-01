@@ -30,12 +30,11 @@ def upd(i, j, dir):
         
         if OOB(ni, nj) or cur_board[ni][nj] == 6:
             return
-        elif 0 < cur_board[ni][nj] <= 5:
+        elif cur_board[ni][nj] != 0:
             continue
 
-        if cur_board[ni][nj] == 0:
-            cur_board[ni][nj] = 7
-            cur_value += 1
+        cur_board[ni][nj] = 7
+        cur_value += 1
 
 for temp in range(1 << 2 * len(cctvs)):
     cur_value = 0
