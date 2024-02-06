@@ -1,15 +1,14 @@
 import sys
+
+# input
 n, m ,k = list(map(int, sys.stdin.readline().rstrip().split()))
 
 sizes = []
 stickers = []
 board = []
 
-def check(sticker, size_r, size_c, start_i, start_j):
-    global board
+r, c = 0, 0
 
-    if start_i + size_r >= n or start_j + size_c >= m:
-        return False
 
 for _ in range(n):
     board.append([0 for _ in range(m)])
@@ -25,6 +24,11 @@ for _ in range(k):
     stickers.append(cur_sticker)
 
 
+# func
+def 
+
+
+# main
 for sticker, index in enumerate(stickers):
     
     for i in range(n - sizes[index][0]):
