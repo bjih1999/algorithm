@@ -17,7 +17,7 @@ for i in range(2, n+1):
     dp[i][1] = dp[i-1][0] + stairs[i]
 
 
-for d in dp:
-    print(d)
+# for d in dp:
+#     print(d)
 
 print(max(dp[n][0], dp[n][1]))
