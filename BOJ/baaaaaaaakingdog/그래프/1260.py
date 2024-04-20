@@ -9,7 +9,7 @@ for _ in range(m):
     adj[a].append(b)
     adj[b].append(a)
 
-for i in range(m):
+for i in range(n):
     adj[i] = sorted(adj[i])
 
 
@@ -35,13 +35,14 @@ def bfs(v):
 
     queue.append(v)
     visited[v] = True
-    answer.append(v)
     while queue:
         cur = queue.popleft()
         answer.append(cur)
         for i in adj[cur]:
-            if not visited[i]:
-                visited[i] = True
+            if visited[i]:
+                continue
+            queue.append(i)
+            visited[i] = True
 
     print(' '.join(list(map(str, answer))))
 
