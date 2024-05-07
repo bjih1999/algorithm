@@ -5,38 +5,35 @@ n, m, k = list(map(int, sys.stdin.readline().rstrip().split()))
 
 board = []
 answers = []
-result = []
-count = 0
+result = {}
 for _ in range(n):
     board.append(list(sys.stdin.readline().rstrip()))
 
 for _ in range(k):
     answers.append(sys.stdin.readline().rstrip())
 
-def dfs(cur_str, x, y, answer):
-    global count, board
+def dfs(cur_str, x, y):
+    global board
 
-    if len(cur_str) > 5:
-        return
+    if not cur_str in result.keys():
+        result[cur_str] = 1
+    else:
+        result[cur_str] += 1
 
-    if cur_str == answer:
-        count += 1
+    if len(cur_str) == 5:
         return
     
-    temp = cur_str + board[x][y]
-
     for move in moves:
-            nx, ny = (x + move[0]) % n, (y + move[1]) % m
-            dfs(temp, nx, ny, answer)
+        nx, ny = (x + move[0] + n) % n, (y + move[1] + m) % m
+        dfs(cur_str + board[nx][ny], nx, ny)
 
+
+for i in range(n):
+    for j in range(m):
+        dfs(board[i][j], i, j)
 
 for answer in answers:
-    count = 0
-    for i in range(n):
-        for j in range(m):
-            dfs('', i, j, answer)
-    
-    result.append(count/8)
-    count  = 0
-
-print('\n'.join(list(map(str, result))))
+    if answer in result.keys():
+        print(result[answer])
+    else:
+        print(0)
