@@ -15,16 +15,16 @@ for _ in range(k):
 def dfs(cur_str, x, y):
     global board
 
+    if len(cur_str) > 5:
+        return
+    
     if not cur_str in result.keys():
         result[cur_str] = 1
     else:
         result[cur_str] += 1
-
-    if len(cur_str) == 5:
-        return
     
     for move in moves:
-        nx, ny = (x + move[0] + n) % n, (y + move[1] + m) % m
+        nx, ny = (x + move[0]) % n, (y + move[1]) % m
         dfs(cur_str + board[nx][ny], nx, ny)
 
 
