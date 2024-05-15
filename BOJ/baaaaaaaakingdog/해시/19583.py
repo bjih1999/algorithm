@@ -7,14 +7,12 @@ e = datetime.datetime.strptime(e, '%H:%M')
 q = datetime.datetime.strptime(q, '%H:%M')
 
 board = {}
-while True:
-    input = sys.stdin.readline().rstrip()
 
-    print(input)
-    if not input:
-        break
+input = sys.stdin.read()
+print(input)
+for i in input:
 
-    t, id = input.split()
+    t, id = input.rstrip().split()
 
     t = datetime.datetime.strptime(t, '%H:%M')
 
@@ -23,4 +21,4 @@ while True:
     if id in board.keys() and e <= t <= q:
         board[id] = 1
 
-print(board)
+print(len(filter(lambda x: x == 1, board.values())))
