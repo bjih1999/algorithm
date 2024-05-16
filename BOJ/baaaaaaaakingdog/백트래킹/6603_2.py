@@ -11,7 +11,7 @@ def dfs(depth, cur):
     
     for i in range(cur, k):
         result[depth] = s[i]
-        dfs(depth+1, cur+1)
+        dfs(depth+1, i+1)
 
 question = []
 while True:
@@ -25,6 +25,6 @@ while True:
 for q in question:
     temp = list(map(int, q.split()))
     k = temp[0]
-    s = sorted(temp[1:])
+    s = temp[1:]
     dfs(0, 0)
     print('')
