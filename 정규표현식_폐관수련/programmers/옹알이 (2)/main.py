@@ -3,9 +3,9 @@ import re
 def solution(babbling):
     answer = 0
     result = []
-    pattern = '^?!(aya{1}|ye{1}|woo{1}|ma{1})*$'
+    pattern1 = r'(aya|ye|woo|ma)\1+'
+    pattern2 = r'^(aya|ye|woo|ma)+$'
     for b in babbling:
-        if re.match(pattern, b):
+        if not re.search(pattern1, b) and re.search(pattern2, b):
             answer += 1
-            result.append(b)
-    return result
+    return answer
