@@ -4,7 +4,8 @@
     2-a. 영상의 길이는 최대 99분 59초 59분이기때문에, 배열의 길이는 최대 360000임.
 3. for 1..play_time : total_times[i] = total_times[i] + total_times[i-1] -> i초에 동시에 시청하는 유저 수
 4. 위 연산을 한번 더 수행함 -> 0초부터 i초 까지의 누적 시청시간
-5. for adv_time-1...playtime : maximum = total_times[i] - total_times[i-adv_time]
+5. for adv_time-1...playtime : maximum = total_times[i] - total_times[i-adv_time], result = i - adv_time + 1
+6. maximum이 갱신될 때의 start_time을 갱신. 마지막으로 갱신된 start_time을 리턴
 
 '''
 
